@@ -1,0 +1,55 @@
+{
+  "name": "voice-relay",
+  "displayName": "Voice Relay：Devin 语音输入转 Claude",
+  "publisher": "N1n3VASthR33H",
+  "author": "N1n3VASthR33H",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "voiceRelay.toggle",
+        "title": "语音输入（借 Devin 麦克风）"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "voiceRelay.toggle",
+        "key": "ctrl+alt+v"
+      }
+    ],
+    "configuration": {
+      "title": "Voice Relay",
+      "properties": {
+        "voiceRelay.timeoutMs": {
+          "type": "number",
+          "default": 15000,
+          "description": "停止录音后等待转写的最长时间"
+        }
+      }
+    }
+  },
+  "description": "借用 Devin 的麦克风语音转写，自动粘贴到 Claude Code 面板输入框。",
+  "license": "MIT",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "voice",
+    "dictation",
+    "claude",
+    "devin",
+    "语音输入"
+  ],
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vvvvvvvvvashhh/voice-relay"
+  }
+}
