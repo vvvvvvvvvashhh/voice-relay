@@ -3,7 +3,7 @@
   "displayName": "Voice Relay：Devin 语音输入转 Claude",
   "publisher": "N1n3VASthR33H",
   "author": "N1n3VASthR33H",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -16,6 +16,10 @@
       {
         "command": "voiceRelay.toggle",
         "title": "语音输入（借 Devin 麦克风）"
+      },
+      {
+        "command": "voiceRelay.reset",
+        "title": "Voice Relay: 重置状态"
       }
     ],
     "keybindings": [
